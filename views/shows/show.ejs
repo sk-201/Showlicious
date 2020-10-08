@@ -1,0 +1,43 @@
+<%- include('../partials/header'); -%>
+<div class="container">
+    
+        <div class="img-thumbnail" >
+           <img  class="img-fluid img-responsive" src=" <%= show.image %> " >
+       <div id="name"><%= show.name.toUpperCase() %></div>
+      <% if(currentUser && show.user.id.equals(currentUser._id)){ %>
+      <form class="destroy"action="/shows/<%= show._id %>?_method=DELETE" method="POST">
+        <a class="btn btn-xs btn-warning" href="/shows/<%=show._id %>/edit">EDIT</a> 
+        <button class="btn btn-xs btn-danger">DELETE</button>
+    </form>
+    <%}%> 
+       <div id="desc"><%= show.desc %></div>
+       <p id="jabar"><em>Submitted by <%= show.user.username %></em>
+       <p>
+           <a class="btn btn-success" href="/shows">Show All Shows</a> 
+        </p>  
+    </p>
+        </div> 
+       <p>
+           <a  class="btn btn-primary" href="/shows/<%=show._id%>/comments/new">Add a new comment</a>
+        </p>
+       <% show.comment.forEach((comment) =>{ %>
+        <div id="comment" class="img-thumbnail"> <%= comment.user.username %>
+              - <span><%= comment.body %></span>  
+           
+           </div>
+        
+           <% if(currentUser && comment.user.id.equals(currentUser._id)){ %>
+            <form action="/shows/<%=show._id%>/comments/<%=comment._id%>?_method=DELETE" method="POST">
+                <a class="btn btn-xs btn-warning" 
+                href="/shows/<%=show._id%>/comments/<%=comment._id%>/edit">EDIT
+             </a>
+                <input type="submit" class="btn btn-xs btn-danger"value="DELETE">
+            </form>   
+            <%}%> 
+
+            </div>
+       <% }) %>
+       
+</div>   
+
+<%- include('../partials/footer'); -%>

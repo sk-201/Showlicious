@@ -1,0 +1,18 @@
+<%- include('../partials/header'); -%> 
+<div class="container">
+    <div class="jumbotron">
+        <h1> Fill out the details for the show</h1>
+        <a href="/shows"><button class="btn btn-success" id="ye">Show Showcamp</button></a>
+
+
+    </div>
+    <form action="/shows" method="POST">
+        
+        <input type="text" name= "name" placeholder="Enter the show name" class="form-control" >
+        <input type="text" name="image" placeholder="url for the image" class="form-control" >
+        <input type="text" name="desc" placeholder="Description for show" class="form-control" >
+        <input type="submit" class="btn btn-primary" class="blah"> 
+          
+    </form>
+</div>
+<%- include('../partials/footer'); -%>

@@ -1,0 +1,26 @@
+<%- include('../partials/header'); -%>
+<div class="container">
+    <div class="jumbotron">
+        <h1>Welcome to Showlicious</h1>
+        <h6>Below are the movies, shows, anime and many more handpicked by our users</h6>
+        <a href="/shows/new"><button class="btn btn-success">ADD a new Show</button></a>
+    </div>
+      
+        <!-- <div class="container"> -->
+        <div class="row">
+             <% show.forEach(function(show){ %>
+                
+                <div class="col-md-4">
+                 
+                <img id="some"src="<%=show.image %>" class="img-thumbnail ">
+                <div class="caption"><%= show.name %></div>
+                <a  class="btn btn-success" href="/shows/<%= show._id %>">More Info</a>
+        </div>
+        <% }) %>
+    
+    <!-- </div> -->
+    
+    </div>
+</div>
+
+<%- include('../partials/footer'); -%>

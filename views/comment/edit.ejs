@@ -1,0 +1,14 @@
+<%- include('../partials/header'); -%>
+<div class="container">
+    <div class="jumbotron">
+        <h1> Edit your comment</h1>
+        <a href="/shows"><button class="btn btn-success" id="ye">Show Showcamp</button></a>
+    </div>
+    <form action="/shows/<%=show._id%>/comments/<%=comment._id%>?_method=PUT" method="POST">
+
+        <input type="text" name="newcomment[body]" value="<%=comment.body%>" class="form-control">
+        <input type="submit" class="btn btn-primary" class="blah">
+
+    </form>
+</div>
+<%- include('../partials/footer'); -%>

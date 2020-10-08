@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Showscamp </title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link href="/css/style.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Gayathri&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/" id="Header">
+        Show-licious
+      </a>
+      <ul class=" nav navbar-nav navbar-right">
+        <% if(!currentUser){ %>
+        <li><a href="/register">SIGN UP</a></li>
+        <li><a href="/login">LOGIN</a></li>
+        <% }else{ %>
+        <li><a href="#">Welcome, <%= currentUser.username %></a></li>
+        <li><a href="/logout">Logout</a></li>
+        <% } %>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <% if(success && success.length>0){%>
+    <div class="alert alert-success" role="alert">
+      <%=success%>
+    </div>
+    <%}%>
+  <% if(error && error.length>0){ %>
+    <div class="alert alert-danger" role="alert">
+      <%= error %>
+    </div>
+    <%}%>
+  </div>
+  

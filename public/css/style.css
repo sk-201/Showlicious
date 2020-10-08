@@ -1,0 +1,93 @@
+.jumbotron{
+    margin-top:30px;
+    font-weight: lighter;
+    color: black;
+    background-color: #CDDCDC;
+    background-image: radial-gradient(at 50% 100%, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%), linear-gradient(to bottom, rgba(255,255,255,0.25) 0%, rgba(0,0,0,0.25) 100%);
+    background-blend-mode: screen, overlay;
+} 
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    text-align:center ;
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+    color: #ffff66;   
+}
+.img-thumbnail{
+    background-color: #D5FAFA;
+    margin:30px auto;
+    padding:none;
+    border:none;
+}
+.btn-success{
+    margin-left: 20px;;
+}
+.form-control{
+    width:30%;
+    margin: 0 auto;
+}
+.blah{
+    margin-top: 10px;
+    margin-left:3px;
+}
+#ye{
+ 
+    margin-right: 10px;
+}
+.img-fluid{
+    margin-top: 50px;
+    height: 400px;
+    width: 30%;
+}
+#name{
+    font-family: 'Gayathri', sans-serif;
+    color:black;
+    font-size: 30px;
+    font-weight: lighter;
+}
+#desc{
+    font-family: 'Roboto Mono', monospace;
+    color:steelblue;
+    margin-bottom: 30px;
+    font-weight: bolder;
+}
+#some{
+    height:50%;
+    width:50%;
+}
+#comment{
+    width:50%;
+    color:black;
+    background-color: #f1f1f1;
+    margin: auto;
+    font-weight: lighter;
+     line-height: 2;
+   
+}
+a{
+    color:black;
+    font-size: smaller;  
+}
+#Header{
+    font-family: 'Bangers', cursive;
+     font-weight: lighter;
+}
+#jabar{
+    color:black;
+    font-weight: lighter;
+}
+.btn-group-xs > .btn, .btn-xs {
+    padding: .25rem .4rem;
+    font-size: .875rem;
+    line-height: .5;
+    border-radius: .2rem;
+  }
+ .alert{
+     margin-top:20px;
+     width:50%;
+     margin-left: 25%;
+     padding:0.1%;
+ } 
+ .navbar{
+     height:8vh;
+ }
